@@ -11,6 +11,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private static final int ADD_NOTICE_ID = R.id.addNotice;
     private static final int ADD_GALLERY_IMAGE_ID = R.id.addGalleryImage;
 
+    private static final int  ADD_EBOOK=R.id.addEbook;
+
     CardView uploadNotice, addGalleryImage, addEbook, faculty;
 
     @Override
@@ -25,8 +27,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         addGalleryImage.setOnClickListener(this);
 
         // Initialize other views and set onClick listeners if needed
-        // addEbook = findViewById(R.id.addEbook);
-        // addEbook.setOnClickListener(this);
+         addEbook = findViewById(R.id.addEbook);
+         addEbook.setOnClickListener(this);
+
         // faculty = findViewById(R.id.faculty);
         // faculty.setOnClickListener(this);
     }
@@ -41,6 +44,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             // Handle click for addGalleryImage
             Log.d("MainActivity", "UploadImage card clicked");
             startActivity(new Intent(MainActivity.this, UploadImage.class));
+        }
+        else if (view.getId() == ADD_EBOOK) {
+            // Handle click for addGalleryImage
+            Log.d("MainActivity", "UploadPdf card clicked");
+            startActivity(new Intent(MainActivity.this, UploadPdfActivity.class));
         }
         // Add more else-if conditions for other views if needed
     }
