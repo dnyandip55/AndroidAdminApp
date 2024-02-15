@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         } else if (view.getId() == ADD_GALLERY_IMAGE_ID) {
             // Handle click for addGalleryImage
             Log.d("MainActivity", "UploadImage card clicked");
-            // startActivity(new Intent(MainActivity.this, UploadImage.class));
+            startActivity(new Intent(MainActivity.this, UploadImage.class));
         }
         // Add more else-if conditions for other views if needed
     }
