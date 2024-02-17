@@ -1,4 +1,4 @@
-package com.example.adminapp;
+package com.example.adminapp.notice;
 
 public class NoticeData {
     String title,image ,date,time,key;
