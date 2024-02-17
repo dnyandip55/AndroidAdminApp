@@ -35,7 +35,6 @@ public class UpdateFaculty extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_faculty);
-
         csDepartment=findViewById(R.id.csDepartment);
         physicsDepartment=findViewById(R.id.physicsDepartment);
         mechDepartment=findViewById(R.id.mechDepartment);
@@ -86,7 +85,7 @@ public class UpdateFaculty extends AppCompatActivity {
                     }
                     csDepartment.setHasFixedSize(true);
                     csDepartment.setLayoutManager(new LinearLayoutManager(UpdateFaculty.this));
-                    adapter=new TeacherAdapter(list1,UpdateFaculty.this);
+                    adapter=new TeacherAdapter(list1,UpdateFaculty.this,"Computer Science");
                     csDepartment.setAdapter(adapter);
 
                 }
@@ -116,7 +115,7 @@ public class UpdateFaculty extends AppCompatActivity {
                     }
                     mechDepartment.setHasFixedSize(true);
                     mechDepartment.setLayoutManager(new LinearLayoutManager(UpdateFaculty.this));
-                    adapter=new TeacherAdapter(list2,UpdateFaculty.this);
+                    adapter=new TeacherAdapter(list2,UpdateFaculty.this,"Mechanical");
                     mechDepartment.setAdapter(adapter);
 
                 }
@@ -146,7 +145,7 @@ public class UpdateFaculty extends AppCompatActivity {
                     }
                     physicsDepartment.setHasFixedSize(true);
                     physicsDepartment.setLayoutManager(new LinearLayoutManager(UpdateFaculty.this));
-                    adapter=new TeacherAdapter(list3,UpdateFaculty.this);
+                    adapter=new TeacherAdapter(list3,UpdateFaculty.this,"Physics");
                     physicsDepartment.setAdapter(adapter);
 
                 }
@@ -176,7 +175,7 @@ public class UpdateFaculty extends AppCompatActivity {
                     }
                     chemDepartment.setHasFixedSize(true);
                     chemDepartment.setLayoutManager(new LinearLayoutManager(UpdateFaculty.this));
-                    adapter=new TeacherAdapter(list4,UpdateFaculty.this);
+                    adapter=new TeacherAdapter(list4,UpdateFaculty.this,"Chemical");
                     chemDepartment.setAdapter(adapter);
 
                 }
