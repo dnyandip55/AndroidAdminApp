@@ -19,9 +19,9 @@ import java.util.List;
 
 public class TeacherAdapter extends RecyclerView.Adapter<TeacherAdapter.TeacherViewAdapter> {
 
-    private List<TeacherData> list;
-    private Context context;
-    private String category;
+    private final List<TeacherData> list;
+    private final Context context;
+    private final String category;
 
     public TeacherAdapter(List<TeacherData> list, Context context, String category) {
         this.list = list;
@@ -70,11 +70,13 @@ public class TeacherAdapter extends RecyclerView.Adapter<TeacherAdapter.TeacherV
         return list.size();
     }
 
-    public class TeacherViewAdapter extends RecyclerView.ViewHolder {
+    public static class TeacherViewAdapter extends RecyclerView.ViewHolder {
 
-        private TextView name, email, post;
-        private Button update;
-        private ImageView imageView;
+        private final TextView name;
+        private final TextView email;
+        private final TextView post;
+        private final Button update;
+        private final ImageView imageView;
 
         public TeacherViewAdapter(@NonNull View itemView) {
             super(itemView);
